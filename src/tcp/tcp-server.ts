@@ -29,7 +29,8 @@ server.on('error', (err) => {
 })
 
 // Define a porta em que o servidor irá ouvir
-server.listen({ port: 7896, host: '127.0.0.1' }, () => {
+const PORT = 7896
+server.listen({ port: PORT }, () => {
 	const address = server.address() as AddressInfo
-	console.log(`tcp server listening on port ${address.port}`)
+	console.log(`TCP server listening on port ${address.port}`)
 })
