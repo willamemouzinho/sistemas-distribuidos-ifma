@@ -14,7 +14,7 @@ const message = 'Olá, servidor!'
 const messageBuffer = Buffer.from(message)
 
 // Envia a mensagem para o servidor
-client.send(messageBuffer, SERVER_PORT, SERVER_HOST, (err) => {
+client.send(messageBuffer, SERVER_PORT, (err) => {
 	if (err) {
 		console.error('erro ao enviar mensagem:', err)
 		client.close()

@@ -26,5 +26,7 @@ server.on('error', (err) => {
 const PORT = 6789
 server.bind({ port: PORT }, () => {
 	const address = server.address()
+	console.log({ address })
+
 	console.log(`UDP server listening on port ${address.port}`)
 })
